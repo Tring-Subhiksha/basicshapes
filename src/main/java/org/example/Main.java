@@ -14,6 +14,7 @@ class Shapes{
      double breadthtri;
     double heighttri;
     Scanner sc2=new Scanner(System.in);
+    static Logger l=Logger.getLogger(".com.api.jar");
     Shapes(int ch)
     {
         if(ch==1)
