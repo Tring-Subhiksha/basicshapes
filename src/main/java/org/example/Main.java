@@ -11,7 +11,8 @@ class Shapes{
     double lengthrect;
     double widthrect;
      double radiuscircle;
-     double breadthtri,heighttri;
+     double breadthtri;
+    double heighttri;
     Scanner sc2=new Scanner(System.in);
     Shapes(int ch)
     {
