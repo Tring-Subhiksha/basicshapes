@@ -1,80 +1,85 @@
 package org.example;
-
+import java.util.logging.*;
 import java.util.Scanner;
 class Shapes{
-    public double triangle,rectangle,circle;
-    public double lengthtri1,lengthtri2,lengthtri3;
-    public double lengthrect,widthrect;
-    public double radiuscircle;
-    public double breadthtri,heighttri;
+    double triangle;
+    double rectangle;
+    double circle;
+     double lengthtri1;
+    double lengthtri2;
+    double lengthtri3;
+    double lengthrect;
+    double widthrect;
+     double radiuscircle;
+     double breadthtri,heighttri;
     Scanner sc2=new Scanner(System.in);
     Shapes(int ch)
     {
         if(ch==1)
         {
-            System.out.println("Enter your choice to perform area operation for the shapes?\n1.Area for Rectangle\n2.Area for Triangle\n3.Area for Circle\n");
+            l.info("Enter your choice to perform area operation for the shapes?\n1.Area for Rectangle\n2.Area for Triangle\n3.Area for Circle\n");
             int a=sc2.nextInt();
             this.areashapes(a);
         }
         else if(ch==2){
-            System.out.println("Enter your choice to perform Perimeter operation for the shapes?\n1.Perimeter for Rectangle\n2.Perimeter for Triangle\n3.Perimeter for Circle\n");
+            l.info("Enter your choice to perform Perimeter operation for the shapes?\n1.Perimeter for Rectangle\n2.Perimeter for Triangle\n3.Perimeter for Circle\n");
             int b=sc2.nextInt();
             this.perimetershapes(b);
         }
         else{
-            System.out.println("Please Enter correct choice");
+            l.info("Please Enter correct choice");
         }
     }
     void areashapes(int shape)
     {
         if(shape==1)
         {
-            System.out.println("Enter the length and width of a Rectangle");
+            l.info("Enter the length and width of a Rectangle");
             lengthrect=sc2.nextDouble();
             widthrect=sc2.nextDouble();
             rectangle=length_rect*widthrect;
-            System.out.println("The Area of Rectangle is:"+rectangle);
+            l.log(Level.INFO, () ->"The Area of Rectangle is:"+rectangle);
         }
         if(shape==2){
-            System.out.println("Enter the breadth and height of a Triangle");
+            l.info("Enter the breadth and height of a Triangle");
             breadthtri=sc2.nextDouble();
             heighttri=sc2.nextDouble();
             triangle=(breadthtri*heighttri)/2;
-            System.out.println("The Area of Triangle is:"+triangle);
+            l.log(Level.INFO, () ->"The Area of Triangle is:"+triangle);
         }
         if(shape==3){
-            System.out.println("Enter the radius for a circle");
+            l.info("Enter the radius for a circle");
             radiuscircle=sc2.nextDouble();
             circle=Math.PI*radiuscircle*radiuscircle;
-            System.out.println("The Area of Circle is:"+circle);
+            l.log(Level.INFO, () ->"The Area of Circle is:"+circle);
         }
     }
     void perimetershapes(int shape){
         if(shape==1){
-            System.out.println("Enter the length and width of a Rectangle");
+            l.info("Enter the length and width of a Rectangle");
             lengthrect=sc2.nextDouble();
             double breadthrect=sc2.nextDouble();
             rectangle=2*(lengthrect+breadthrect);
-            System.out.println("The Perimeter of Rectangle is:"+rectangle);
+            l.log(Level.INFO, () ->"The Perimeter of Rectangle is:"+rectangle);
         }
         if(shape==2){
-            System.out.println("Enter the breadth and height of a Triangle");
+            l.info("Enter the breadth and height of a Triangle");
             lengthtri1=sc2.nextDouble();
             lengthtri2=sc2.nextDouble();
             lengthtri3=sc2.nextDouble();
             triangle=lengthtri1*lengthtri2*lengthtri3;
-            System.out.println("The Perimeter of Triangle is:"+triangle);
+            l.log(Level.INFO, () ->"The Perimeter of Triangle is:"+triangle);
         }
         if(shape==3){
-            System.out.println("Enter the radius for a circle");
+            l.info("Enter the radius for a circle");
             radiuscircle=sc2.nextDouble();
             circle=2*Math.PI*radiuscircle;
-            System.out.println("The Perimeter of Circle is:"+circle);
+            l.log(Level.INFO, () ->"The Perimeter of Circle is:"+circle);
         }
     }
     public static void main(String[] args){
         Scanner sc=new Scanner(System.in);
-        System.out.println("Which choice you want to choose? \n1.Area for shapes\n2.Perimeter for shapes\n");
+        l.info("Which choice you want to choose? \n1.Area for shapes\n2.Perimeter for shapes\n");
         int ch=sc.nextInt();
         Shapes s=new Shapes(ch);
     }
