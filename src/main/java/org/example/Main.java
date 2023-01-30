@@ -78,7 +78,7 @@ class Shapes{
             l.log(Level.INFO, () ->"The Perimeter of Circle is:"+circle);
         }
         void display(){
-            l.info("No shapes are created");
+            l.info("shapes are created");
     }
     public static void main(String[] args){
         Scanner sc=new Scanner(System.in);
