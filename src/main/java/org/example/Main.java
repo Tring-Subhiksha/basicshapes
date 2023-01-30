@@ -82,6 +82,6 @@ class Shapes{
         Scanner sc=new Scanner(System.in);
         l.info("Which choice you want to choose? \n1.Area for shapes\n2.Perimeter for shapes\n");
         int ch=sc.nextInt();
-        Shapes s=new Shapes(ch);
+        new Shapes(ch);
     }
 }
