@@ -78,6 +78,7 @@ class Shapes{
             circle=2*Math.PI*radiuscircle;
             l.log(Level.INFO, () ->"The Perimeter of Circle is:"+circle);
         }
+    }
         void display(){
             l.info("shapes are created");
     }
