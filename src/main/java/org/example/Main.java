@@ -82,8 +82,7 @@ class Shapes{
         void display(){
             l.info("shapes are created");
     }
-}
-class Basicshapes{
+
     public static void main(String[] args){
         Scanner sc=new Scanner(System.in);
         l.info("Which choice you want to choose? \n1.Area for shapes\n2.Perimeter for shapes\n");
