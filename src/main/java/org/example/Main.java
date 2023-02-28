@@ -39,7 +39,7 @@ class Shapes{
             l.info("Enter the length and width of a Rectangle");
             lengthrect=sc2.nextDouble();
             widthrect=sc2.nextDouble();
-            rectangle=length_rect*widthrect;
+            rectangle=lengthrect*widthrect;
             l.log(Level.INFO, () ->"The Area of Rectangle is:"+rectangle);
         }
         if(shape==2){
